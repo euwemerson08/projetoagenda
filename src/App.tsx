@@ -36,7 +36,7 @@ const AdminProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children
 
 function App() {
   return (
-    <Router> {/* Removido basename para o ambiente de preview */}
+    <Router basename="/wandering-dragon-swoop"> {/* Adicionado basename aqui */}
       <SessionContextProvider>
         <Routes>
           {/* Public Routes */}
