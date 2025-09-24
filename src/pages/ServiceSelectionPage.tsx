@@ -97,6 +97,10 @@ const ServiceSelectionPage: React.FC = () => {
         setEligibleEmployees([]);
       } else {
         setEligibleEmployees(data || []);
+        // Lógica para pré-selecionar se apenas um funcionário for elegível
+        if (data && data.length === 1) {
+          setSelectedEmployeeId(data[0].id);
+        }
       }
       setLoadingEmployees(false);
     };
